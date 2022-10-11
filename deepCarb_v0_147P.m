@@ -353,8 +353,8 @@ for j = 1:nMC
         k12(i) = 0.06*360000000*1000^2*(atCO2in(i) - co2sysOutSurf(i-1,2));
 
         % The mass of carbon in the atmosphere is equal to the mass in the
-        % previous step multiplied by the CO2 ratio between this step and
-        % the last. Make the simplifying assumption that mass C and CO2
+        % previous step plus the amount of CO2 added in this steo. 
+        % Make the simplifying assumption that mass C and CO2
         % directly scale:
         m1(i) = m1(i-1) + CO2in(i);   % change in total C in atmosphere (Gt)
         
@@ -374,7 +374,7 @@ for j = 1:nMC
         w12(i) = ((0.0384)/(1+exp(-(MCrand(1,1)*0.02)*...
             (atCO2out(i-1)-atCO2in(1))))*(atCO2out(i-1)/atCO2in(1))...
             ^(MCrand(1,2)*0.25)+0.0384*1.5)*sT(i);
-        % uncomment this to use prescribe no weathering sensitivity to T
+        % uncomment this to prescribe no weathering sensitivity to T
         %w12(i) = 0.0384*2*sT(i);
         
         % uncomment below to drive weathering rates independently of
@@ -454,7 +454,7 @@ for j = 1:nMC
 %             weatherCa*((0.7680+m2(i))/m2(1)*ocDICin - m2(i)/m2(1)*ocDICin)./1000.*...
 %             surfVol/oceanVol;
 
-        % This is one simple way in which C export &remineralisation in 
+        % This is one simple way in which C export & remineralisation in 
         % the deep ocean could be perturbed
 %         if i==1e6/sT(i)
 %             orgC = orgC - 20;
