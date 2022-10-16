@@ -77,14 +77,14 @@ machine learning toolbox
 
 ------------------------------- EXAMPLES -------------------------------
 
-Where these example recommend changing the values of nMC, linlog, ageEnd,
+Where these examples recommend changing the values of nMC, linlog, ageEnd,
 and the use or otherwise of the parallel computing toolbox, these can be
 found on lines 135, 140, 136, and 156 respectively. In the latter case,
 'for' simply needs to be replaced with 'parfor'.
 
 1. Simulate the anthropogenic C release and run the model once using the
 default settings. Set nMC = 1, linlog = 0 (to view the long and short
-term effects, ageEnd = 1e6, and use a for loop rather than parfor.
+term effects), ageEnd = 1e6, and use a for loop rather than parfor.
 Uncomment lines 274-275 to load the anthropogenic C release data, and
 comment line 280 specifying no atmospheric CO2 perturbation.
 
