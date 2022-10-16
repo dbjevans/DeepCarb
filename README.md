@@ -39,7 +39,7 @@ control whether the data are shown on a linear or logarithmic scale
 (1 = linear, 0  = log).
 
 The results are contained in the cell array dataOut which has dimensions 
-n*1. The format of each cell is an ageEnd*15 matrix, with the following 
+n-by-1. The format of each cell is an ageEnd-by-15 matrix, with the following 
 columns:
   1) Total C in the atmosphere box (Gt)
   2) Total C in the surface ocean box (Gt)
